@@ -4,6 +4,10 @@
 วันที่สำรวจ: 2026-10-16
 ขอบเขต: inventory ของ skill ที่ติดตั้งในเครื่องนี้, role สำหรับการทำงานร่วมกัน, แนวทางแยกตาม Claude / Codex / Antigravity และ task สำหรับพัฒนาต่อ
 
+Canonical repository: [AI-hub](https://github.com/Sunnylnwza007/AI-hub)
+
+การติดตั้งลง project อื่นให้อ่าน [Installation guide](installation.md) และใช้ `tooling/install-agent-playbook.sh` แทนการคัดลอก local path จากเครื่องผู้เขียน
+
 Role contracts ที่นำไปใช้ข้าม project ได้อยู่ที่ [`docs/agent-roles.md`](agent-roles.md)
 
 ## 1. หลักการใช้งานร่วมกัน
@@ -36,6 +40,42 @@ Role contracts ที่นำไปใช้ข้าม project ได้อ�
 | เอกสารและการกำกับ | `writing-for-agents`, `commit`, `iso27001-commit` |
 | Frontend / product | `impeccable` |
 | อื่น ๆ | `setup-matt-pocock-skills` |
+
+### 2.1.1 Shared skill repository
+
+รายการ skill ที่ทีมดูแลและติดตั้งซ้ำได้อยู่ใน [chatcone-ai-tooling](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/tree/main/skills) ซึ่งเป็น private repository และต้องมีสิทธิ์เข้าถึง GitLab
+
+ลิงก์แต่ละรายการเปิดไปยัง `SKILL.md` ของ skill โดยตรง:
+
+| Skill | Source |
+|---|---|
+| `codebase-design` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/codebase-design/SKILL.md) |
+| `codegraph-usage` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/codegraph-usage/SKILL.md) |
+| `commit` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/commit/SKILL.md) |
+| `context-efficient-debugging` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/context-efficient-debugging/SKILL.md) |
+| `domain-modeling` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/domain-modeling/SKILL.md) |
+| `grill-with-docs` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/grill-with-docs/SKILL.md) |
+| `grilling` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/grilling/SKILL.md) |
+| `handoff` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/handoff/SKILL.md) |
+| `impeccable` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/impeccable/SKILL.md) |
+| `improve-codebase-architecture` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/improve-codebase-architecture/SKILL.md) |
+| `large-initiative-workflow` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/large-initiative-workflow/SKILL.md) |
+| `postgresql-best-practices` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/postgresql-best-practices/SKILL.md) |
+| `project-knowledge` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/project-knowledge/SKILL.md) |
+| `prototype` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/prototype/SKILL.md) |
+| `refactoring-workflow` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/refactoring-workflow/SKILL.md) |
+| `serena-refactoring` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/serena-refactoring/SKILL.md) |
+| `setup-matt-pocock-skills` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/setup-matt-pocock-skills/SKILL.md) |
+| `supabase-postgres-best-practices` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/supabase-postgres-best-practices/SKILL.md) |
+| `to-spec` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/to-spec/SKILL.md) |
+| `to-tickets` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/to-tickets/SKILL.md) |
+| `token-efficient-coding` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/token-efficient-coding/SKILL.md) |
+| `tool-selection` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/tool-selection/SKILL.md) |
+| `triage` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/triage/SKILL.md) |
+| `wayfinder` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/wayfinder/SKILL.md) |
+| `writing-for-agents` | [SKILL.md](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/skills/writing-for-agents/SKILL.md) |
+
+การติดตั้งทั้งชุดให้ใช้ `teamai init` และ `teamai pull` ตาม [README ของ repository](https://hubdev.clicknext.co.th/chatcone/chatcone-ai-tooling/-/blob/main/README.md) แทนการดาวน์โหลด `SKILL.md` ทีละไฟล์ ส่วน Codex ที่ต้องการใช้ skill แบบ local ให้ตรวจ path และ adapter ตามเอกสารติดตั้งของ project ก่อน
 
 ### 2.2 Agent / Superset skills
 

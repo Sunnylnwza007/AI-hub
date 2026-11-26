@@ -1,0 +1,16 @@
+name: ai-agent-operating-playbook
+version: 1.0.0
+source_repository: https://github.com/Sunnylnwza007/AI-hub
+artifacts:
+  - source: docs/agent-roles.md
+    destination: .ai-agent-playbook/docs/agent-roles.md
+  - source: docs/ai-agent-operating-playbook.md
+    destination: .ai-agent-playbook/docs/ai-agent-operating-playbook.md
+  - source: docs/installation.md
+    destination: .ai-agent-playbook/docs/installation.md
+  - source: install/manifest.yaml
+    destination: .ai-agent-playbook/install/manifest.yaml
+adapters:
+  - AGENTS.md
+  - CLAUDE.md
+  - GEMINI.md
